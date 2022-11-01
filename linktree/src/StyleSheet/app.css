@@ -11,6 +11,7 @@
     gap: 32px;
     align-items: center;
     margin: 30px;
+    position: relative;
 }
 
 #linksDiv{
@@ -21,7 +22,7 @@
 }
 
 .a_link{
-    width:1152px;
+    width: 80vw;
     background-color: rgba(234, 236, 240 ,1);
     border-radius:8px;
     padding: 24px 32px;
@@ -29,18 +30,48 @@
     text-decoration: none;
     color: black;
     text-align: center;
-    font-family: inter;
-    font-size: 18px;
-    line-height: 28px;
+    font-family: candara, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.4em;
+    line-height: 2.5em;
     font-weight: 700;
 }
 
-#profile_img{
-    width:88px;
-    height:88px;
-    border-radius:44px;
+.a_link:hover{
+    background-color: rgba(208, 213, 221, 1);
 }
 
+#profile_img{
+    width:8em;
+    height:8em;
+    border-radius:4em;
+}
+
+#imageDiv{
+    position: relative;
+} 
+
+#profile_img:hover ~ #overlay{
+    display: block;
+}
+
+ #overlay{
+    background-color: rgba(16, 16, 16, 0.6);
+    width:8em;
+    height:8em;
+    border-radius:4em;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    align-content: center;
+    display: none;
+} 
+#camera{
+    position: absolute;
+    width: 2em;
+    top:70%;
+    left: 40%;
+}
 #profileDiv{
     display: flex;
     flex-direction: column;
@@ -54,8 +85,37 @@
 }
 
 #twitter{
-    font-family: inter;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.4em;
     line-height: 30px;
+
+}
+
+
+#shareNmoreDiv{
+    position: absolute;
+    top: 5%;
+    left: 90%;
+}
+
+#shareModal{
+    width: 4em;
+    display: none;
+    position: absolute;
+    top: -120%;
+    left: -100%;
+}
+
+#shareNmoreDiv:hover > #shareModal{
+    display: inline-block;
+}
+
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+    flex-wrap: nowrap;
+    flex-basis: 1;
 }
